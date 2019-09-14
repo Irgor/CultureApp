@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab One
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+    
+<ion-content>
+  
+    <ion-list *ngFor="let event of events">
+      <ion-card (click)="teste(event.codEvento)">
+        <ion-card-header>
+          <ion-card-title>{{event.nomeEvento}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Descrição:  {{event.descricaoEvento}} <br/>
+          Tipo de Evento: {{event.nomeTipoEvento}} <br/>
+          Endereco: {{event.logradouroEvento}}, {{event.cepEvento}} <br/>
+          Data do evento: {{event.dataInicioEvento}} <br/>
+          <div *ngIf="event.statusEvento == 1; else elseBlock">
+            Aberto
+          </div>
+          <ng-template #elseBlock>
+            Fechado
+          </ng-template>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  
+</ion-content>
+
