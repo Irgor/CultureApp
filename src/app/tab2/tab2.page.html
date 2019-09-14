@@ -1,9 +1,21 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      <span class="glyphicon glyphicon-chevron-left" (click)="voltarEvento()"></span>
+      {{evento.nomeEvento}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  
+  {{evento.descricaoEvento}}
+  {{status}}
+  {{evento.cepEvento}}
+  {{evento.logradouroEvento}}
+  
+  <div id="mapa" style="height:300px; width: 100%;"> </div>
+  
+  
+  
+</ion-content>

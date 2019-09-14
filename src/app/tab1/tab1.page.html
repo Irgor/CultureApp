@@ -11,7 +11,7 @@
 <ion-content>
   
     <ion-list *ngFor="let event of events">
-      <ion-card (click)="teste(event.codEvento)">
+      <ion-card (click)="abrirEvento(event.codEvento)">
         <ion-card-header>
           <ion-card-title>{{event.nomeEvento}}</ion-card-title>
         </ion-card-header>
