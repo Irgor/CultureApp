@@ -1,0 +1,79 @@
+<ion-content>
+
+  <div class="container" id="Container">
+    <!-- BOTÃO VOLTAR -->
+
+    <div class="voltar" id="voltarBut" href="a">
+        <a (click)="BotaoVoltar()" style="text-decoration: none; color: white;">
+          <ion-icon name="ios-arrow-back"></ion-icon>
+          <p style="font-size: 20px">Voltar</p>
+        </a>
+    </div>
+
+    <!-- FIM BOTÃO -->
+
+    <p class="LogCent" style="margin-bottom:17vh;">Culture</p>
+
+
+    <!-- LOGAR -->
+
+    <div class="login" id="Logar">
+
+        <p class="LogCentHead">Logue-se ou crie uma conta</p>
+
+      <form (ngSubmit)="loginUser()">
+        <ion-input type="text" placeholder="Email / Usuário" [(ngModel)]="userLogin.login" [ngModelOptions]="{standalone: true}"></ion-input>
+        <ion-input type="password" placeholder="Senha" [(ngModel)]="userLogin.senha" [ngModelOptions]="{standalone: true}"></ion-input>
+        
+        <ion-input id="botaoColorir1" class="buttonLog" type="submit" placeholder="Login" value="Login" style="margin-top:2%;"></ion-input>
+      </form>
+      <p class="logPass">
+          <a (click)="ForgotPass()" >Esqueceu sua senha?</a>
+          &nbsp;&nbsp;
+          <a (click)="Cadastrar()" style="border-left: 1px solid white; margin-left: 5%; width: 42% !important" >
+          Crie uma conta</a>
+        </p>
+    </div>
+
+    <!-- FIM LOGAR -->
+
+
+
+    <!-- ESQUECEU SENHA -->
+  
+    <div class="login" id="EsqueceuSenha">
+        <p class="LogCentHead">Digite seu e-mail de recuperação</p>
+        <ion-input type="text" placeholder="Email"></ion-input>
+        
+        <ion-input id="botaoColorir2" class="buttonLog" type="button" placeholder="Login" value="Enviar" style="margin-top:2%;"></ion-input>
+        
+    </div>
+
+    <!-- FIM ESQUECEU SENHA -->
+
+
+    <!-- CADASTRO -->
+
+    <div class="login" id="Cadastro">
+      <p class="LogCentHead">Junte se a gente!</p>
+
+      <form (ngSubmit)="saveUser()">
+        <ion-input type="text" placeholder="Nome" name="nomeUsuario" [(ngModel)]="user.nomeUsuario"></ion-input>
+        <ion-input type="text" placeholder="Email" [(ngModel)]="user.emailUsuario" [ngModelOptions]="{standalone: true}"></ion-input>
+        <ion-input type="password" placeholder="Senha" name="senhaUsuario" [(ngModel)]="user.senhaUsuario"></ion-input>
+        <ion-input type="password" placeholder="Confirme sua senha" [(ngModel)]="senhadois" [ngModelOptions]="{standalone: true}"></ion-input>
+        
+        <ion-list>
+          <ion-datetime display-format="DD MMM, YYYY" placeholder="Data de Nascimento" class="datetime" [(ngModel)]="dataNascimentoUsuarioTemp" [ngModelOptions]="{standalone: true}"></ion-datetime>
+        </ion-list>
+
+        <ion-input id="botaoColorir3" class="buttonLog" type="submit"  value="Cadastrar" style="margin-top:2%;"></ion-input>
+        </form>
+
+    </div>
+
+    <!-- FIM CADASTRO -->
+  </div>
+
+</ion-content>
+  
