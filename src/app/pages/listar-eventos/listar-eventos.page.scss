@@ -1,0 +1,60 @@
+ion-card{
+    ion-card-header{
+        padding: 0;
+        .fotoEvento{
+            border-radius: 2px;
+            float: left;
+            width: 100%;
+            height: 80px;
+            background-color: white;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-bottom: 2%;
+            z-index: 9999;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    ion-card-content{
+        padding: 3%;
+        padding-top: 4%;  
+        font-size: 125%;
+        .money{
+            color: green !important;
+        } 
+    }
+}
+
+// ion-card{
+//     height: 13vh;
+//     border-right: 8px solid #8f18fc;
+//     overflow: hidden;
+//     // Imagem do Evento
+//     ion-card-header{
+//       float: left;
+//       width: 15vw;
+//       height: 100%;
+//       padding: 0px;
+//     //   background-image: url(https://www.opopular.com.br/polopoly_fs/1.1879012.1567610247!/image/image.jpeg_gen/derivatives/landscape_800/image.jpeg);
+//       background-size: cover;
+//       background-position: center;
+//       overflow: hidden;
+//     }
+//     // Descrição do Evento
+//     ion-card-content{
+//       float: left;
+//       padding-top: 10px;
+//       width: 80%;
+//       p{
+//         float: left;
+//       }
+//     }
+  
+// }
+  
+ion-title{
+    margin-left: -12%;
+}

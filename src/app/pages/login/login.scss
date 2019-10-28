@@ -1,0 +1,145 @@
+
+*{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,"ＭＳ Ｐゴシック",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  outline: none;
+}
+
+.container{
+  overflow-y: hidden;
+  width: 100vw;
+  height: 100vh;
+  // WALLPAPER DO APP
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.buttonLog{
+  border: 0px !important;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  // COR DO BOTÃO DO APP
+  
+  // #e4791b Laranja *Forte*
+  // #e3d209 Amarelo mostarda
+}
+.LogCent{
+  width: 250px;
+  font-size: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color:  white;
+}
+.LogCentHead{
+  width: 250px;
+  font-size: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color:  white;
+  font-size: 15px;
+}
+.logPass{ 
+  width: 250px;
+  font-size: 12px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color:  white;
+}
+.logPass a{
+  float: left;
+  width: 48%;
+  text-decoration: none;
+  color: white;
+}
+.login{
+  width: 80vw;
+  height: 23vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login ion-input{
+  width: 100%;
+  padding: 10px;
+  padding-left: 17px;
+  border-radius: 25px;
+  margin: 2.5%;
+  margin-bottom: 0%;
+  margin-left: 0%;
+  color: white;
+  border: 0.5px solid white;
+  background-color: transparent;
+}
+.login ion-list{
+  background-color: transparent;
+}
+.login ion-list ion-datetime{
+  width: 100%;
+  padding: 10px;
+  padding-left: 17px;
+  border-radius: 25px;
+  color: #ffffffde;
+  margin-left: 0%;
+  border: 0.5px solid white;
+  background-color: transparent;
+}
+.outLogin{
+  float: left;
+  width: 80%;
+  padding: 10px;
+  padding-left: 17px;
+  border-radius: 25px;
+  margin: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  border: 0.5px solid white;
+  background-color: transparent;
+}
+.login input::placeholder{
+  color:  #ffffffbd;
+}
+
+#Container{
+  --background: cover;
+}
+
+#Cadastro input::placeholder{
+  color: white !important;
+}
+#Cadastro{
+  display: none;
+}
+#EsqueceuSenha{
+  display: none;
+}
+#voltarBut{
+  display: none;
+}
+.animacaoItens{
+  animation: animacao 1s;
+}
+@keyframes animacao{
+  0%{ opacity: 0.0;}
+  100%{ opacity: 1.0;}
+}
+
+// VOLTAR
+.voltar{
+  position: absolute;
+  font-size: 25px;
+  width: 22vw;
+  height: 5vh;
+  margin: 5%;
+  margin-top: 6%;
+  color: white;
+}
+.voltar ion-icon{
+  float: left;
+}
+.voltar p{
+  margin-top: -2px;
+}
+// FIM VOLTAR

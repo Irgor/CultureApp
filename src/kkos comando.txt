@@ -1,0 +1,1 @@
+npm i --save @angular/service-worker @ionic/storage @ionic-native/in-app-browser @angular/fire firebase

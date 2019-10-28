@@ -1,0 +1,263 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="segment" (ionChange)="updateSchedule()">
+      <ion-segment-button value="all">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        Favorites
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+COMENTAR ACIMA TUDO
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="danger" ></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+        <img src="../../../assets/img/logoname.png" class="imgLogo">
+    </ion-title>
+
+
+    COMENTAR A BAIXo
+    <ion-buttons slot="end">
+      <ion-button (click)="presentFilter()" color="primary">
+        <span *ngIf="ios">Filter</span>
+        <span *ngIf="!ios">
+          <ion-icon slot="icon-only" name="options"></ion-icon>
+        </span>
+      </ion-button>
+    </ion-buttons>
+    COMENTAR ACIMA
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  COMENTAR ABAIXO
+    <div id="userInicial">
+      <div id="iconUser" >
+        <img src="" alt="">
+      </div>  
+      <p id="nomeUser">Aleh</p>
+    </div>
+      COMENTAR ACIMA
+    <div id="container">
+       <div id="comecaANFI">
+         Pra onde vamos?
+       </div>
+    
+       <div id="subContainer">
+    
+        <div class="OptionBox bg1">
+          <br>
+          <ion-icon name="heart"></ion-icon>
+          <p>Favoritos</p>
+        </div>
+    
+        <div class="OptionBox bg2">
+          <br>
+          <ion-icon name="copy"></ion-icon>
+          <p>Histórico</p>
+        </div>
+    
+        <a (click)="listarEventos('all')">
+          <div class="OptionBox bg3" >
+            <br>
+            <ion-icon name="logo-buffer"></ion-icon>
+            <p>Todos</p>
+          </div>
+        </a>
+    
+        <div class="OptionBox bg4">
+          <br>
+          <ion-icon name="flame"></ion-icon>
+          <p>Mais Vistos</p>
+        </div>
+        
+        <div class="OptionBox bg5">
+          <br>
+          <ion-icon name="time"></ion-icon>
+          <p>Agora</p>
+        </div>
+    
+        <div class="OptionBox bg6">
+          <br>
+          <ion-icon name="help"></ion-icon>
+          <p>Explorar</p>
+        </div>
+    
+       </div>
+    </div>
+    
+    </ion-content> -->
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <!-- <ion-icon name="contact"></ion-icon> -->
+          <ion-menu-button color="Medium"  name="contact"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+          <ion-icon name="search"></ion-icon>
+          <input type="text" placeholder="Evento ou Categoria">
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    
+    <ion-content>
+      <!-- Refresher -->
+        <ion-refresher slot="fixed">
+          <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>
+      <!-- Refresher -->
+    
+        <ion-card-subtitle style="width: 100%; text-align: right; padding-right: 8.5%; margin: 2%;">Olá, Bem Vindo!</ion-card-subtitle>
+       
+        <!-- Evento slide com 2 cards pra evento totalizando 8 -->
+        <h1>Hoje!</h1>
+        <ion-slides>
+
+            <ion-slide *ngFor="let event of eventosCima1 let i = index">
+              
+              <ion-card [ngStyle]="{'background-image': 'url(' + event.imgEvento + ')'}" (click)='abrirEvento(event.codEvento)'>
+                <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                    <ion-card-title>{{event.nomeEvento}}</ion-card-title>
+                    <ion-card-subtitle>{{event.nomeCategoria}}</ion-card-subtitle>
+                </ion-card-header>
+                  
+                <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+                  
+                </ion-card-content>
+                
+              </ion-card>
+
+              <ion-card [ngStyle]="{'background-image': 'url(' + eventosCima2[i].imgEvento + ')'}" (click)='abrirEvento(eventosCima2[i].codEvento)'>
+                <ion-card-header  style="background-color: rgba(0, 0, 0, 0.500)">
+                    <ion-card-title>{{eventosCima2[i].nomeEvento}}</ion-card-title>
+                    <ion-card-subtitle>{{eventosCima2[i].nomeCategoria}}</ion-card-subtitle>
+                </ion-card-header>
+                  
+                <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+                  
+                </ion-card-content>
+                
+              </ion-card>
+                
+            </ion-slide>
+
+
+        </ion-slides>
+    
+        <!-- Contribuidores -->
+        <h4>Populares</h4>
+        <ion-list>
+          <!-- Itau -->
+          <ion-item (click)="abrirSite('ita')">
+            <ion-avatar slot="start">
+              <img src="https://alumnicoppead.com.br/wp-content/uploads/2016/01/itau-logo.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h2>Itáu</h2>
+              <h3>Itáu Cultural</h3>
+              <p>Popular entre os usuários do <font color="orangered">Culture</font>!</p>
+            </ion-label>
+          </ion-item>
+          <!-- Sesc -->
+          <ion-item (click)="abrirSite('sesc')">
+            <ion-avatar slot="start">
+              <img src="http://sinprfdf.org.br/wp-content/uploads/2018/12/Concurso-Sesc-DF-735x400-734x367.png">
+            </ion-avatar>
+            <ion-label>
+              <h2>Sesc</h2>
+              <h3>Espaço Sesc</h3>
+              <p>Sempre trazendo bons eventos para você :)</p>
+            </ion-label>
+          </ion-item>
+          <!-- Sala São Paulo -->
+          <ion-item (click)="abrirSite('sala')">
+            <ion-avatar slot="start">
+              <img src="http://www.newscom.inf.br/Uploads/noticias/zoom_38ca26c36c922fe6943210267c1d3dfc.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h2>Sala São Paulo</h2>
+              <h3>Teatro sala São Paulo</h3>
+              <p>O melhor de São Paulo você encontra aqui. ;)</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+    
+        <!-- Categorias Eventos -->
+        <h4 style="margin-top: 5%;">Categorias</h4>
+        <div id="Categorias">
+          <ion-slides>
+    
+            <ion-slide>
+              <!-- Case categoria -->
+              <ion-card style="background-color: rgba(255, 68, 0, 0.80);" (click)="abrirCat('Geral')">
+                <div id="iconCase">
+                    <ion-icon name="flame"></ion-icon>
+                </div>
+                <ion-label>Geral</ion-label>
+              </ion-card>
+    
+              <ion-card style="background-color: rgba(255, 0, 0, 0.80);" (click)="abrirCat('favs')">
+                <div id="iconCase">
+                    <ion-icon name="heart"></ion-icon>
+                </div>
+                <ion-label>Gostei</ion-label>
+              </ion-card>
+    
+              <ion-card style="background-color: rgba(47, 255, 175, 0.8);" (click)="abrirHoje()">
+                <div id="iconCase">
+                    <ion-icon name="time"></ion-icon>
+                </div>
+                <ion-label>Hoje</ion-label>
+              </ion-card>
+                      
+              <ion-card style="background-color: rgba(16, 16, 16, 0.80);" (click)="abrirCat('cat_Musica')">
+                <div id="iconCase">
+                    <ion-icon name="musical-notes"></ion-icon>
+                </div>
+                <ion-label>Musica</ion-label>
+              </ion-card>
+              
+              <ion-card style="background-color: rgba(44, 77, 226, 0.80);" (click)="abrirCat('cat_Literatura')">
+                <div id="iconCase">
+                    <ion-icon name="book"></ion-icon>
+                </div>
+                <ion-label>Saber</ion-label>
+              </ion-card>
+    
+            </ion-slide>
+    
+          </ion-slides>
+        </div>
+    
+        <!-- Eventos -->
+        <h4 style="margin-top: 5%;">Eventos</h4>
+        <div id="Eventos" style="margin: 5%; margin-left: 0%;" *ngFor="let event of eventosBaixo">
+          <ion-card (click)='abrirEvento(event.codEvento)'>
+            <!-- Imagem do Evento -->
+            <ion-card-header [ngStyle]="{'background': '#' + event.corEvento }">
+              <img [src]=event.imgEvento>
+            </ion-card-header>
+          
+            <ion-card-content>
+              <!-- Nome Evento -->
+              <ion-title>
+                {{event.nomeEvento}}
+              </ion-title>
+              <!-- Conteudo do Evento -->
+              <ion-card-subtitle>Rua: {{event.logradouroEvento}}</ion-card-subtitle>
+              <ion-card-subtitle>Preço: {{preco}}</ion-card-subtitle>
+            </ion-card-content>
+          </ion-card>
+        </div>
+    
+    </ion-content>

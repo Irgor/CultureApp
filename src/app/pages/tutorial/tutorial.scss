@@ -1,0 +1,92 @@
+b {
+  font-weight: 500;
+}
+
+p {
+  padding: 0 40px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ion-color-step-600, #000000);
+
+  b {
+    color: var(--ion-text-color, #000000);
+  }
+}
+
+.slide-image2{
+  width: 60%;
+  height: 70%;
+}
+
+#btnProximo{
+  --background: #ff8e8e;
+  color: black;
+  float: left;
+  width: 40%;
+  margin-left: 10%;
+}
+
+#btnProximo2{
+  --background: #98cc9b;
+  color: black;
+  float: left;
+  width: 40%;
+}
+
+.balao1{
+    margin: 0 auto; 
+    background: #f0f7f4;
+    font-family: 'open sans';
+    font-size: 0.85em;
+    line-height: 1.6em;  
+    border-radius: 15px;
+    width: 300px;
+    height: auto;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    margin-top: 30px;
+}
+.balao1:after{ /*Triangulo*/
+    content: "";
+    width: 0;
+    height: 0;
+    
+    position: absolute;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
+    /*Aqui entra a cor da "aba" do balão */
+    border-left: 20px solid #f0f7f4;
+    right: -15px; /*localização. Experimente alterar para 'bottom'*/
+    bottom: 20px;
+}
+
+.balao2{
+  margin: 0 auto; 
+  background: #99e1d9;
+  font-family: 'open sans';
+  font-size: 0.85em;
+  line-height: 1.6em;  
+  border-radius: 15px;
+  width: 300px;
+  height: auto;
+  color: #fff;
+  padding: 20px;
+  position: relative;
+  margin-top: 30px;
+}
+.balao2:after{ /*Triangulo*/
+  content: "";
+  width: 0;
+  height: 0;
+  
+  position: absolute;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
+  /*Aqui entra a cor da "aba" do balão */
+  border-right: 20px solid #99e1d9;
+  left: -15px; /*localização. Experimente alterar para 'bottom'*/
+  bottom: 20px;
+}

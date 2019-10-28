@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color='primary' (click)="startApp()" [hidden]="!showSkip">Prosseguir</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+      <!-- <img src="../../../assets/img/cacto.jpg" class="slide-image" /> -->
+      <h2 class="slide-title">
+        
+      </h2>
+      <div class="balao2">
+        <p>
+            Bem-vindo ao
+            <b>Culture!</b>
+        </p>
+      </div>
+      <ion-list *ngFor="let sh of shirley" >
+        <div *ngIf="sh.who == 1; else elseBlock">  
+         <div class="balao1">
+            <p>
+              {{sh.msg}}
+            </p>
+           </div>
+        </div>
+        <ng-template #elseBlock>
+          <div class="balao2">
+            <p>
+              {{sh.msg}}
+            </p>
+          </div>
+        </ng-template>
+      </ion-list>
+
+      
+          
+</ion-content>
+<ion-footer>
+    <ion-button id="btnProximo" (click)="volta()">Não entendi.</ion-button>
+    <ion-button id="btnProximo2" (click)="next()">Ok! Entendi.</ion-button>
+</ion-footer>

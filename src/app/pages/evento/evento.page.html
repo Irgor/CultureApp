@@ -1,0 +1,181 @@
+<!-- 
+<ion-content>
+
+  Cabeçario
+  <div id="foto">
+    <div id="opacidade">
+      <p>{{evento.nomeEvento}}</p>
+    </div>
+
+  Voltar Para Lista de Eventos
+  <div id="Voltar" (click)="voltarLista()">
+    <ion-icon name="arrow-round-back"></ion-icon>
+  </div>
+  Fim do Voltar
+
+  </div>
+  Fim do cabeçario
+
+  Cabeçario
+  <p style="text-align: center; margin-bottom: 0%;">
+    <b>Descrição</b>
+  </p>
+  <div id="CorpoEvento">
+    <p>{{evento.descricaoEvento}}</p>
+  </div>
+
+  Corpo do Evento
+  <p style="text-align: center;">
+  <b>Cep:</b> {{evento.cepEvento}}
+  </p>
+  <p style="text-align: center;">
+  {{evento.logradouroEvento}}
+  </p>
+
+  Evento pago ou não
+  <div id="payOrnah">
+    <p>Preço:</p>
+    <p>Gratuito</p>
+  </div>
+
+  Mapa com local do evento
+  <div id="mapa" style="height:300px; width: 100%;"></div>
+  Mapa com local do evento
+
+  Contato
+  <div id="Contato">
+    <p><b>Twitter</b>&nbsp; @unknown</p>
+  </div>
+
+</ion-content> -->
+
+<ion-content>
+
+  <div id="image" [ngStyle]="{'background-image': 'url(' + img + ')'}"> 
+    <div id="opacidade">
+        <ion-icon name="arrow-round-back" (click)="fuckGoBack()" ></ion-icon>
+        <ion-icon name="heart-empty" (click)="fav(evento.codEvento)" id="fav"></ion-icon>
+        <ion-icon name="share"></ion-icon>
+    </div>
+    
+  </div>
+  
+  <div id="infoEvento">
+    <!-- Informações do evento -->
+    <h1>{{evento.nomeEvento}}<p>{{evento.dataInicioEvento}}</p></h1>
+    <!-- Hora, se tiver -->
+    <ion-card-subtitle style="font-size: 105%;" (click)="eventosSite()">
+      {{evento.origemEvento}}
+      <ion-icon name="checkmark-circle" style="color: rgb(0, 102, 255); margin-bottom: -1%;"></ion-icon>
+    </ion-card-subtitle>
+    <h5 (click)="eventosCat()">Categoria: {{evento.nomeCategoria}}</h5> 
+    <h5 (click)="eventosClassi()">Classificação Indicativa: {{evento.classificacaoIndicativa}}</h5>  
+    <h6>{{preco}}</h6>
+  
+    <!-- uns br tosco -->
+    <br><br><br>
+  
+    <!-- Descrição do Evento -->
+    <div id="caseEvento">
+      <p style="font-weight: bold; font-size: 18px;">Mais sobre!</p>
+      <p id="descEvento">
+        {{evento.descricaoEvento}}
+      </p>
+    </div>
+  
+    <!-- Div com quebra e Guia -->
+    <div id="quebraCulture">
+      <ion-icon name="navigate"></ion-icon>
+    </div>
+  
+    <!-- Mapa/Localização Evento -->
+    <div id="caseEventoDois">
+      <h4>Localizaçã<ion-icon name="locate"></ion-icon></h4>
+      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1486452547256!2d-46.656571185705666!3d-23.563104284682066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1571888938735!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
+      <div id="mapa" style="height:300px; width: 100%;"> </div>      
+    </div>
+  
+    <!-- Div com quebra e Guia -->
+    <div id="quebraCulture">
+      <ion-icon name="navigate"></ion-icon>
+    </div>
+  
+    <!-- Case com uber e 99 -->
+    <div id="caseEventoDois">
+      <h4>Se precisar de uma carona...</h4>
+  
+        <ion-list>
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="https://seeklogo.com/images/U/uber-logo-2BB8EC4342-seeklogo.com.png">
+            </ion-avatar>
+            <ion-label>
+              <h2>Uber</h2>
+              <h3>R$ 14,90</h3>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="https://logodownload.org/wp-content/uploads/2015/12/99-taxis-logo-2.png">
+            </ion-avatar>
+            <ion-label>
+              <h2>99</h2>
+              <h3>R$ 14,90</h3>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+    </div>
+  
+    <!-- Div com quebra e Guia -->
+    <div id="quebraCulture">
+      <ion-icon name="navigate"></ion-icon>
+    </div>
+  
+    <!-- Case com Eventos Semelhantes -->
+      <!-- Evento slide com 2 cards pra evento totalizando 8 -->
+      <h4 style="text-align: center;">Mais parecidos com este...</h4>
+      <div *ngIf="isIndicacoes == true; else elseBlock">
+
+        <ion-slides>
+          <ion-slide *ngFor="let event of eventosBaixo1 let i = index">
+            
+            <ion-card [ngStyle]="{'background-image': 'url(' + event.imgEvento + ')'}" (click)='abrirEvento(event.codEvento)'>
+              <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>{{event.nomeEvento}}</ion-card-title>
+                <ion-card-subtitle>{{event.nomeCategoria}}</ion-card-subtitle>
+              </ion-card-header>
+              
+              <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+                  
+              </ion-card-content>
+              
+            </ion-card>
+            
+            <ion-card [ngStyle]="{'background-image': 'url(' + eventosBaixo2[i].imgEvento + ')'}" (click)='abrirEvento(eventosBaixo2[i].codEvento)'>
+              <ion-card-header  style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>{{eventosBaixo2[i].nomeEvento}}</ion-card-title>
+                <ion-card-subtitle>{{eventosBaixo2[i].nomeCategoria}}</ion-card-subtitle>
+              </ion-card-header>
+              
+              <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+                
+              </ion-card-content>
+              
+            </ion-card>
+          </ion-slide>
+      </ion-slides>
+      </div>
+      <ng-template #elseBlock>
+        <h4 style="text-align: center;">Não há parecidos com este</h4>
+      </ng-template>
+      </div>
+        <!-- Contato -->
+            <div id="Contato">
+      <h4>Contato</h4>
+      <p>
+        <b>Site</b>
+        &nbsp;
+        <a href="https://www.culture.net.br">www.culture.net.br</a>
+      </p>
+  </div>
+  </ion-content>

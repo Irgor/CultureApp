@@ -1,35 +1,235 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab One
+      <ion-icon name="search"></ion-icon>
+      <input type="text" placeholder="Evento ou Categoria">
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-
-    
 <ion-content>
-  
-    <ion-list *ngFor="let event of events">
-      <ion-card (click)="abrirEvento(event.codEvento)">
+  <!-- Refresher -->
+    <ion-refresher slot="fixed">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  <!-- Refresher -->
+
+    <ion-card-subtitle style="width: 100%; text-align: right; padding-right: 8.5%; margin: 2%;">Boa noite Usuário</ion-card-subtitle>
+   
+    <!-- Evento slide com 2 cards pra evento totalizando 8 -->
+    <h1>Hoje!</h1>
+    <ion-slides>
+
+      <ion-slide>
+        
+          <ion-card style="background-image: url(https://img.freepik.com/vetores-gratis/fundo-moderno-com-formas-dinamicas-gradientes_23-2148206129.jpg?size=626&ext=jpg);">
+            <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>Evento</ion-card-title>
+                <ion-card-subtitle>Genero Evento</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+              
+            </ion-card-content>
+          </ion-card>
+          
+          <ion-card style="background-image: url(https://png.pngtree.com/thumb_back/fw800/20151105/pngtree-Background-Screen-Design-Graphic-background-photo-819444.jpg);">
+            <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>Evento</ion-card-title>
+                <ion-card-subtitle>Genero Evento</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+             
+            </ion-card-content>
+          </ion-card>
+          
+      </ion-slide>
+
+      <ion-slide>
+
+          <ion-card style="background-image: url(https://images.vexels.com/media/users/3/100312/raw/1ec4fa7bce0966f287957531a0679161-vetor-abstrato-design-grafico-colorido-fundo.jpg);">
+            <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>Evento</ion-card-title>
+                <ion-card-subtitle>Genero Evento</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+              
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card style="background-image: url(https://image.freepik.com/psd-gratuitas/fundo-de-design-roxo_1297-186.jpg);">
+            <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>Evento</ion-card-title>
+                <ion-card-subtitle>Genero Evento</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+              
+            </ion-card-content>
+          </ion-card>
+
+      </ion-slide>
+      
+      <ion-slide>
+
+          <ion-card style="background-image: url(https://images.vexels.com/media/users/3/142117/raw/421e90a8f074e8a466b848a9788ffe54-fundo-minimalista-rosa-e-laranja.jpg);">
+            <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>Evento</ion-card-title>
+                <ion-card-subtitle>Genero Evento</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+              
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card style="background-image: url(https://image.freepik.com/vetores-gratis/rosa-e-laranja-fundo-geometrico_1057-2002.jpg);">
+            <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>Evento</ion-card-title>
+                <ion-card-subtitle>Genero Evento</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+              
+            </ion-card-content>
+          </ion-card>
+
+      </ion-slide>
+
+      <ion-slide>
+          <ion-card style="background-image: url(https://s3.envato.com/files/ca715c8d-12a7-4f47-a43a-32ef604fec50/inline_image_preview.jpg);">
+            <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>Evento</ion-card-title>
+                <ion-card-subtitle>Genero Evento</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+              
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card style="background-image: url(https://static.vecteezy.com/system/resources/previews/000/663/320/non_2x/retro-trendy-geometric-shapes-memphis-hipster-background-vector.jpg);">
+            <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>Evento</ion-card-title>
+                <ion-card-subtitle>Genero Evento</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+              
+            </ion-card-content>
+          </ion-card>
+      </ion-slide>
+
+
+    </ion-slides>
+
+    <!-- Contribuidores -->
+    <h4>Populares</h4>
+    <ion-list>
+      <!-- Itau -->
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://alumnicoppead.com.br/wp-content/uploads/2016/01/itau-logo.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h2>Itáu</h2>
+          <h3>Itáu Cultural</h3>
+          <p>Popular entre os usuários do <font color="orangered">Culture</font>!</p>
+        </ion-label>
+      </ion-item>
+      <!-- Sesc -->
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="http://sinprfdf.org.br/wp-content/uploads/2018/12/Concurso-Sesc-DF-735x400-734x367.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Sesc</h2>
+          <h3>Espaço Sesc</h3>
+          <p>Sempre trazendo bons eventos para você :)</p>
+        </ion-label>
+      </ion-item>
+      <!-- Sala São Paulo -->
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="http://www.newscom.inf.br/Uploads/noticias/zoom_38ca26c36c922fe6943210267c1d3dfc.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h2>Sala São Paulo</h2>
+          <h3>Teatro sala São Paulo</h3>
+          <p>O melhor de São Paulo você encontra aqui. ;)</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <!-- Categorias Eventos -->
+    <h4 style="margin-top: 5%;">Categorias</h4>
+    <div id="Categorias">
+      <ion-slides>
+
+        <ion-slide>
+          <!-- Case categoria -->
+          <ion-card style="background-color: rgba(255, 68, 0, 0.80);">
+            <div id="iconCase">
+                <ion-icon name="flame"></ion-icon>
+            </div>
+            <ion-label>Geral</ion-label>
+          </ion-card>
+
+          <ion-card style="background-color: rgba(255, 0, 0, 0.80);">
+            <div id="iconCase">
+                <ion-icon name="heart"></ion-icon>
+            </div>
+            <ion-label>Gostei</ion-label>
+          </ion-card>
+
+          <ion-card style="background-color: rgba(47, 255, 175, 0.8);">
+            <div id="iconCase">
+                <ion-icon name="time"></ion-icon>
+            </div>
+            <ion-label>Agora</ion-label>
+          </ion-card>
+                  
+          <ion-card style="background-color: rgba(16, 16, 16, 0.80);">
+            <div id="iconCase">
+                <ion-icon name="musical-notes"></ion-icon>
+            </div>
+            <ion-label>Musica</ion-label>
+          </ion-card>
+          
+          <ion-card style="background-color: rgba(44, 77, 226, 0.80);">
+            <div id="iconCase">
+                <ion-icon name="book"></ion-icon>
+            </div>
+            <ion-label>Saber</ion-label>
+          </ion-card>
+
+        </ion-slide>
+
+      </ion-slides>
+    </div>
+
+    <!-- Eventos -->
+    <h4 style="margin-top: 5%;">Eventos</h4>
+    <div id="Eventos" style="margin: 5%; margin-left: 0%;">
+      <ion-card>
+        <!-- Imagem do Evento -->
         <ion-card-header>
-          <ion-card-title>{{event.nomeEvento}}</ion-card-title>
+          <img src="https://virgobrasil.com.br/wp-content/uploads/2018/01/campus-party.jpeg" alt="">
         </ion-card-header>
       
         <ion-card-content>
-          Descrição:  {{event.descricaoEvento}} <br/>
-          Tipo de Evento: {{event.nomeTipoEvento}} <br/>
-          Endereco: {{event.logradouroEvento}}, {{event.cepEvento}} <br/>
-          Data do evento: {{event.dataInicioEvento}} <br/>
-          <div *ngIf="event.statusEvento == 1; else elseBlock">
-            Aberto
-          </div>
-          <ng-template #elseBlock>
-            Fechado
-          </ng-template>
+          <!-- Nome Evento -->
+          <ion-title>
+            Campus party
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </ion-title>
+          <!-- Conteudo do Evento -->
+          <ion-card-subtitle>Rua: Nome da rua azevedo</ion-card-subtitle>
+          <ion-card-subtitle>Preço: Gratuito</ion-card-subtitle>
         </ion-card-content>
       </ion-card>
-    </ion-list>
-  
-</ion-content>
+    </div>
 
+</ion-content>
