@@ -1,21 +1,157 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      <span class="glyphicon glyphicon-chevron-left" (click)="voltarEvento()"></span>
-      {{evento.nomeEvento}}
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+
+<div id="image">
+  <div id="opacidade">
+      <ion-icon name="arrow-round-back"></ion-icon>
+      <ion-icon name="heart-empty"></ion-icon>
+      <ion-icon name="share"></ion-icon>
+  </div>
   
-  {{evento.descricaoEvento}}
-  {{status}}
-  {{evento.cepEvento}}
-  {{evento.logradouroEvento}}
-  
-  <div id="mapa" style="height:300px; width: 100%;"> </div>
-  
-  
-  
+</div>
+
+<div id="infoEvento">
+  <!-- Informações do evento -->
+  <h1>Campus Party<p>24 Out</p></h1>
+  <!-- Hora, se tiver -->
+  <ion-card-subtitle>
+    <ion-icon name="alarm" style="margin-bottom: -0.5%"></ion-icon>
+    20:00 - 23:00
+  </ion-card-subtitle>
+  <ion-card-subtitle>
+    Itaú Cultural 
+    <ion-icon name="checkmark-circle" style="color: rgb(0, 102, 255); margin-bottom: -1%;"></ion-icon>
+  </ion-card-subtitle>
+  <h5>Categoria: Tecnologia, Ciências e afins</h5>  
+  <h6>Gratuito</h6>
+
+  <!-- uns br tosco -->
+  <br><br><br>
+
+  <!-- Descrição do Evento -->
+  <div id="caseEvento">
+    <p style="font-weight: bold; font-size: 18px;">Mais sobre Campus Party!</p>
+    <p id="descEvento">
+      A Campus Party Brasil é o principal acontecimento 
+      tecnológico realizado anualmente no Brasil. 
+      Nele são tratados os mais diversos temas 
+      relacionados à Internet, reunindo um grande 
+      número de comunidades e usuários da rede 
+      mundial de computadores envolvidos com 
+      tecnologia e cultura digital.
+    </p>
+  </div>
+
+  <!-- Div com quebra e Guia -->
+  <div id="quebraCulture">
+    <ion-icon name="navigate"></ion-icon>
+  </div>
+
+  <!-- Mapa/Localização Evento -->
+  <div id="caseEventoDois">
+    <h4>Localizaçã<ion-icon name="locate"></ion-icon></h4>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1486452547256!2d-46.656571185705666!3d-23.563104284682066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1571888938735!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+  </div>
+
+  <!-- Div com quebra e Guia -->
+  <div id="quebraCulture">
+    <ion-icon name="navigate"></ion-icon>
+  </div>
+
+  <!-- Case com uber e 99 -->
+  <div id="caseEventoDois">
+    <h4>Se precisar de uma carona...</h4>
+
+      <ion-list>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="https://seeklogo.com/images/U/uber-logo-2BB8EC4342-seeklogo.com.png">
+          </ion-avatar>
+          <ion-label>
+            <h2>Uber</h2>
+            <h3>R$ 14,90</h3>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="https://logodownload.org/wp-content/uploads/2015/12/99-taxis-logo-2.png">
+          </ion-avatar>
+          <ion-label>
+            <h2>99</h2>
+            <h3>R$ 14,90</h3>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+  </div>
+
+  <!-- Div com quebra e Guia -->
+  <div id="quebraCulture">
+    <ion-icon name="navigate"></ion-icon>
+  </div>
+
+  <!-- Case com Eventos Semelhantes -->
+    <!-- Evento slide com 2 cards pra evento totalizando 8 -->
+    <h4 style="text-align: center;">Mais parecidos com este...</h4>
+    <ion-slides>
+
+      <ion-slide>
+        
+          <ion-card style="background-image: url(https://img.freepik.com/vetores-gratis/fundo-moderno-com-formas-dinamicas-gradientes_23-2148206129.jpg?size=626&ext=jpg);">
+            <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>Evento</ion-card-title>
+                <ion-card-subtitle>Genero Evento</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+              
+            </ion-card-content>
+          </ion-card>
+          
+          <ion-card style="background-image: url(https://png.pngtree.com/thumb_back/fw800/20151105/pngtree-Background-Screen-Design-Graphic-background-photo-819444.jpg);">
+            <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>Evento</ion-card-title>
+                <ion-card-subtitle>Genero Evento</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+             
+            </ion-card-content>
+          </ion-card>
+          
+      </ion-slide>
+
+      <ion-slide>
+          <ion-card style="background-image: url(https://s3.envato.com/files/ca715c8d-12a7-4f47-a43a-32ef604fec50/inline_image_preview.jpg);">
+            <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>Evento</ion-card-title>
+                <ion-card-subtitle>Genero Evento</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+              
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card style="background-image: url(https://static.vecteezy.com/system/resources/previews/000/663/320/non_2x/retro-trendy-geometric-shapes-memphis-hipster-background-vector.jpg);">
+            <ion-card-header style="background-color: rgba(0, 0, 0, 0.500)">
+                <ion-card-title>Evento</ion-card-title>
+                <ion-card-subtitle>Genero Evento</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content style="background-color: rgba(0, 0, 0, 0.500)">
+              
+            </ion-card-content>
+          </ion-card>
+      </ion-slide>
+
+    </ion-slides>
+</div>
+<!-- Contato -->
+<div id="Contato">
+    <h4>Contato</h4>
+    <p>
+      <b>Site</b>
+      &nbsp;
+      <a href="www.culture.net.br">www.culture.net.br</a>
+    </p>
+</div>
 </ion-content>

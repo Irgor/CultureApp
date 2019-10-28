@@ -1,9 +1,137 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      <ion-icon name="search"></ion-icon>
+      <input type="text" placeholder="Evento ou Categoria">
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <!-- Sugestões -->
+  <!-- 4 -->
+  <h4>Sugestões</h4>
+  <div id="Lista">
+    <p>
+      <ion-icon name="refresh"></ion-icon>
+      Show
+    </p>
+    <p>
+      <ion-icon name="refresh"></ion-icon>
+      Livraria
+    </p>
+    <p>
+      <ion-icon name="refresh"></ion-icon>
+      Sárau
+    </p>
+    <p>
+      <ion-icon name="refresh"></ion-icon>
+      Dança
+    </p>
+  </div>
+
+  <!-- Categorias -->
+  <!-- 8 -->
+  <h4 style="margin-top: 5%;">Categorias</h4>
+  <div id="Categorias">
+    <ion-slides>
+
+      <!-- 4 categorias -->
+      <ion-slide>
+        <!-- Case categoria -->
+        <ion-card style="background-color: rgba(255, 68, 0, 0.80);">
+          <div id="iconCase">
+              <ion-icon name="flame"></ion-icon>
+          </div>
+          <ion-label>Geral</ion-label>
+        </ion-card>
+
+        <ion-card style="background-color: rgba(255, 0, 0, 0.80);">
+          <div id="iconCase">
+              <ion-icon name="heart"></ion-icon>
+          </div>
+          <ion-label>Gostei</ion-label>
+        </ion-card>
+
+        <ion-card style="background-color: rgba(47, 255, 175, 0.8);">
+          <div id="iconCase">
+              <ion-icon name="time"></ion-icon>
+          </div>
+          <ion-label>Agora</ion-label>
+        </ion-card>
+                
+        <ion-card style="background-color: rgba(16, 16, 16, 0.80);">
+          <div id="iconCase">
+              <ion-icon name="musical-notes"></ion-icon>
+          </div>
+          <ion-label>Musica</ion-label>
+        </ion-card>
+        
+        <ion-card style="background-color: rgba(44, 77, 226, 0.80);">
+          <div id="iconCase">
+              <ion-icon name="book"></ion-icon>
+          </div>
+          <ion-label>Saber</ion-label>
+        </ion-card>
+
+      </ion-slide>
+
+      <!-- 4 categorias -->
+      <ion-slide>
+        <!-- Case categoria -->
+        <ion-card style="background-color: rgba(255, 68, 0, 0.80);">
+          <div id="iconCase">
+              <ion-icon name="flame"></ion-icon>
+          </div>
+          <ion-label>Geral</ion-label>
+        </ion-card>
+
+        <ion-card style="background-color: rgba(255, 0, 0, 0.80);">
+          <div id="iconCase">
+              <ion-icon name="heart"></ion-icon>
+          </div>
+          <ion-label>Gostei</ion-label>
+        </ion-card>
+
+        <ion-card style="background-color: rgba(47, 255, 175, 0.8);">
+          <div id="iconCase">
+              <ion-icon name="time"></ion-icon>
+          </div>
+          <ion-label>Agora</ion-label>
+        </ion-card>
+                
+        <ion-card style="background-color: rgba(16, 16, 16, 0.80);">
+          <div id="iconCase">
+              <ion-icon name="musical-notes"></ion-icon>
+          </div>
+          <ion-label>Musica</ion-label>
+        </ion-card>
+        
+        <ion-card style="background-color: rgba(44, 77, 226, 0.80);">
+          <div id="iconCase">
+              <ion-icon name="book"></ion-icon>
+          </div>
+          <ion-label>Saber</ion-label>
+        </ion-card>
+
+      </ion-slide>
+
+    </ion-slides>
+  </div>
+
+  <!-- Semelhantes aos que você já viu -->
+  <h4 style="margin-bottom: 0%;">Talvez você possa gostar...</h4>
+  <div id="talveUserGoste">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Campus Party</ion-card-title>
+        <ion-card-subtitle>Feira de Ciências</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+          A Campus Party Brasil é o principal acontecimento tecnológico realizado anualmente no Brasil.
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+</ion-content>

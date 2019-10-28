@@ -1,1 +1,141 @@
+// A propria imagem
+#image{
+    width: 100vw;
+    height: 25vh;
+    background-image: url(http://acn.ucentral.co/images/ACN_CAMPUS.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+// Opacidade da imagem
+#opacidade{
+    width: 100%;
+    height: 100%;
+    // background-image: linear-gradient(to right, rgba(161, 48, 206, 0.4), rgba(0, 0, 0, 0.4));
+    background-color: rgba(0, 0, 0, 0.400);
 
+    ion-icon{
+        margin: 3.5%;
+        float: right;
+        font-size: 25px;
+        color: white;
+    }
+    ion-icon:nth-child(1){
+        float: left;
+    }
+}
+// Container pra informações
+#infoEvento{
+    padding: 5%;
+    margin-top: -5%;
+    border-radius: 15px;
+    background-color: white;
+    
+    ion-card-subtitle{
+        padding: 5px;
+    }
+    h1{
+        margin: 0%;
+        p{
+            float: right;
+            margin: 0%;
+            font-size: 17px;
+        }
+    }
+    h6{
+        float: right;
+        font-weight: bold;
+        color: green;
+    }
+}
+// Container pra informações
+#descEvento{
+    width: 100%;
+    height: auto;
+}
+// Container pra informações
+#caseEvento{
+    p{
+        margin-top: 0%;
+    }
+    background-color: hsla(0, 0%, 81%, 0.400);
+    padding: 5%;
+    border-radius: 15px;
+}
+// Case com qubera
+#quebraCulture{
+    margin: 2%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    width: 96%;
+    height: 2px;
+    background-color: #cfcfcf20;
+    border-radius: 15px;
+    // Teste de alinhamento
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 35px;
+    color: rgb(57, 140, 235);
+    transform: rotate(180deg);
+}
+// Case evento mapa
+#caseEventoDois{
+    width: 100%;
+    height: auto;
+    background-color: hsla(0, 0%, 81%, 0.400);
+    border-radius: 15px;
+    padding-top: 5%;
+    padding-bottom: 8%;
+    h4{
+        margin-top: 0%;
+        text-align: center;
+        ion-icon{
+            margin-bottom: -1.2%;
+        }
+    }
+    iframe{
+        width: 100%;
+    }
+}
+#Contato{
+    width: 100vw;
+    padding: 5%;
+    padding-top: 1%;
+    background-color: rgb(57, 140, 235);
+    color: white;
+    h4{
+        text-align: center;
+        font-weight: bold;
+    }
+    p{
+        text-align: center;
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+ion-slide{
+    ion-card{
+      background-position: center;
+      color: white;
+      font-weight: bold;
+      width: 50vw;
+      height: 235px;
+      ion-card-content{
+        height: 100%;
+      }
+      ion-card-title{
+        text-align: left;
+        color: white;
+        font-weight: bold;
+      }
+      ion-card-subtitle{
+        text-align: left;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }

@@ -1,0 +1,239 @@
+// .welcome-card img {
+//   max-height: 35vh;
+//   overflow: hidden;
+// }
+
+// ion-title{
+//   padding-left: 0px;
+//   padding-right: 0px;
+//   img{
+//     width: 50%;
+//     margin-left: -15%;
+//   }
+// }
+
+// #userInicial{
+//   width: 100vw;
+//   height: 22vh;
+//   padding: 5vw;
+//   background-size: 100%;
+//   background-image: url(../../../assets/IMGS/BgUser8.png);
+//   background-position: center;
+// }
+
+// #iconUser{
+//   float: left;
+//   width: 70px;
+//   height: 70px;
+//   border: 5px solid rgb(255, 255, 255);
+//   box-shadow: 1px 1px 10px #cfcfcf;
+//   color: white;
+//   border-radius: 50%;
+//   background-image: url(https://i.pinimg.com/564x/21/3f/50/213f500e013222583d4e779b322ecb15.jpg);
+//   background-size: cover;
+// }
+
+// #nomeUser{
+//   float: right;
+//   font-weight: 900;
+//   color: white;
+//   font-size: 8vw;
+//   margin-bottom: 0%;
+//   margin-right: 8%;
+// }
+// .subUser{
+//   width: 40%;
+//   float: right;
+// }
+
+// // Conteudo
+
+// #container{
+//   float: left;
+//   width: 100vw;
+//   padding-bottom: 5%;
+// }
+
+// #comecaANFI{
+//   width: 83%;
+//   border-radius: 5px;
+//   // box-shadow: 1px 1px 10px #cfcfcf;
+//   // border: 1px solid rgb(133, 54, 223);
+//   height: 50px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-top: 5%;
+//   text-align: center;
+//   font-weight: bold !important;
+//   padding-top: 4%;
+// }
+
+// #subContainer{
+//   width: 85%;
+//   border-radius: 5px;
+//   height: auto;
+//   margin-top: 2%;
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding: 0.5%;
+// }
+
+// .OptionBox{
+//   float: left;
+//   width: 48%;
+//   margin: 1%;
+//   height: auto;
+//   padding: 0.5%;
+//   text-align: center; 
+//   border-radius: 5px;
+//   background-color: white;
+//   color: white;
+//   font-weight: bold;
+
+//   ion-icon{
+//     font-weight: bold;
+//     font-size: 7vw;
+//   }
+// }
+// .OptionBox::first-letter{
+//   text-transform: uppercase;
+// }
+
+// .bg1{background-color: #ad57df;}
+// .bg2{background-color:  #f33514;}
+// .bg3{background-color: #11cdef;}
+// .bg4{background-color:  #da179f;}
+// .bg5{background-color:  #6ebb16;}
+// .bg6{background-color:  #ff1f01;}
+
+
+//=====================================
+
+#opacidade{
+  width: auto;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.411);
+}
+// Search
+ion-header{
+  ion-icon{
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 13px;
+  }
+  input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 0px;
+    background-color: #cfcfcf5b;
+    padding-left: 40px;
+    font-size: 15px;
+  }
+  input::placeholder{
+    color: #363636;
+  }
+}
+// Placeholder da pesauisa
+.input-wrapper{
+  border: 0px !important;
+}
+// Slides 
+ion-slide{
+  ion-card{
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-weight: bold;
+    width: 50vw;
+    height: 235px;
+    padding-top: 0%;
+    ion-card-content{
+      height: 100%;
+    }
+    ion-card-title{
+      text-align: left;
+      color: white;
+      font-weight: bold;
+    }
+    ion-card-subtitle{
+      text-align: left;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+// Titulos
+h1{
+  width: 100%;
+  padding-left: 5%;
+  margin: 2%;
+  font-weight: bold;
+}
+// Titulos
+h4{
+  width: 100%;
+  padding-left: 5%;
+  margin: 2%;
+  font-weight: bold;
+}
+// Categorias
+#Categorias{
+  ion-card{
+    height: 65px;
+
+    ion-label{
+      width: 100%;
+    }
+
+  }
+}
+#iconCase{
+  width: 100%;
+  height: 40px;
+  ion-icon{
+    padding-top: 10px;
+    font-size: 25px;
+  }
+}
+// Estilização do Evento
+#Eventos{
+  width: 100vw;
+  height: auto;
+  ion-card-header{
+    width: 80px !important;
+    height: 80px;
+    float: left;
+    background-color: rgba(47, 255, 175, 0.8);;
+    img{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  ion-card-content{
+    width: 66vw;
+    float: left;
+    padding:8px;
+
+    ion-title{
+      font-size: 15px;
+      font-weight: bold;
+      padding-left: 10px;
+    }
+
+    ion-card-subtitle{
+      padding-left: 10px;
+    }
+    ion-icon{
+      margin-bottom: -1.5%;
+      color: rgb(0, 162, 255);
+      font-size: 17px;
+    }
+
+  }
+
+}
+

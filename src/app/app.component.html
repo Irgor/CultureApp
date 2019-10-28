@@ -1,3 +1,130 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
+<ion-app [class.dark-theme]="dark">
+  <ion-split-pane >
+
+    <ion-menu id="myMenu">
+      <ion-content>
+
+        <!-- Não achei necessário comentei -->
+        <ion-list>
+            <ion-item routerLink="/conta" routerDirection="root">
+              <div id="boxUser" class=".dark-theme">
+                <div id="userIconCircle">
+              </div>
+                
+                <div id="nameUsuario" *ngIf='googleLogin; else elseBlock' >
+                  {{usuario.user.displayName}}
+                </div>
+                <ng-template #elseBlock>
+                  <p id="nameUsuario" >{{usuario}}</p>
+                </ng-template>
+              </div>
+            </ion-item>
+              
+          <ion-menu-toggle autoHide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item [routerLink]="p.url" routerLinkActive="active" routerDirection="root">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+
+          </ion-menu-toggle>
+          
+        </ion-list>
+        <!-- Não achei necessário comentei -->
+
+        <ion-list *ngIf="loggedIn">
+          <ion-list-header>
+              Conta
+          </ion-list-header>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item routerLink="/account" routerDirection="root">
+              <ion-icon slot="start" name="person"></ion-icon>
+              <ion-label>
+                  Conta
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item routerLink="/support" routerDirection="root">
+              <ion-icon slot="start" name="help"></ion-icon>
+              <ion-label>
+                Ajuda
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item button (click)="logout()">
+              <ion-icon slot="start" name="log-out"></ion-icon>
+              <ion-label>
+                Sair
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+
+        <ion-list *ngIf="!loggedIn">
+          <ion-list-header>
+            Account
+          </ion-list-header>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item routerLink="/login" routerDirection="root">
+              <ion-icon slot="start" name="settings"></ion-icon>
+              <ion-label>
+                Configurações
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item routerLink="/support" routerDirection="root">
+              <ion-icon slot="start" name="help"></ion-icon>
+              <ion-label>
+                Suporte/Shirley
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item (click)="logout()">
+              <ion-icon slot="start" name="log-out"></ion-icon>
+              <ion-label>
+                Sair
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list>
+          <ion-list-header>
+            Tutorial
+          </ion-list-header>
+          <ion-menu-toggle autoHide="false">
+            <ion-item button (click)="openTutorial()">
+              <ion-icon slot="start" name="hammer"></ion-icon>
+              <ion-label>Ver o Tutorial</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list>
+          <ion-item>
+            <ion-label>
+              Apagar as Luzes
+            </ion-label>
+            <ion-toggle color="danger" [(ngModel)]="dark"></ion-toggle>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet main></ion-router-outlet>
+    
+  </ion-split-pane>
+
 </ion-app>

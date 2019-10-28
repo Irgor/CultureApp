@@ -1,4 +1,14 @@
 /*
+ * App CSS
+ * ----------------------------------------------------------------------------
+ * Imports a file that can contain Sass/CSS that should be used throughout
+ * the entire app.
+ */
+
+@import "./app/app.scss";
+
+
+/*
  * App Global CSS
  * ----------------------------------------------------------------------------
  * Put style rules here that you want to apply globally. These styles are for
@@ -24,3 +34,88 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// *{
+//     font-family: 'Raleway', sans-serif !important; 
+// }
+
+
+// .searchbar-input.sc-ion-searchbar-md{
+//     -webkit-box-shadow: 0px 0px 0px #ffffff !important;
+//     box-shadow: 0px 0px 0px #ffffff !important;
+// }
+
+// ion-title{
+//     text-align: center;
+//     font-weight: bold;
+// }
+
+// #NothingHere{
+//     width: 100vw;
+//     height: 75vh;
+//     justify-content: center;
+//     align-items: center;
+//     display: flex;
+  
+//     p{
+//       width: 150px;
+//       font-weight: bold;
+//       text-align: center;
+//     }
+//   }
+  
+
+
+// .active{
+//     color: #f53d3d !important;
+//     ion-icon{
+//         color:  #f53d3d !important;
+//     }
+// }
+
+// .buttonColorOne{ color: #2ba737 }
+// .buttonColorTwo{ color: #c1270f }
+// .buttonColorThree{ color: #8635ae }
+// .buttonColorFour{ color: #fcc415 }
+
+
+// ================================
+
+.header-md:after{
+    background-image: none !important;
+}
+*{
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+}
+// Search
+ion-header{
+    ion-icon{
+      position: absolute;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      padding-left: 13px;
+    }
+    input{
+      width: 100%;
+      padding: 10px;
+      border-radius: 15px;
+      border: 0px;
+      background-color: #cfcfcf5b;
+      padding-left: 40px;
+      font-size: 15px;
+    }
+    input::placeholder{
+      color: #363636;
+    }
+  }
+  // Placeholder da pesauisa
+  .input-wrapper{
+    border: 0px !important;
+  }
+
+  
+ion-item{
+ --border-color: transparent !important;  
+}
